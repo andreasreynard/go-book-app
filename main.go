@@ -36,7 +36,7 @@ func main() {
 
 		isValidName := len(firstName) >= 2 && len(lastName) >= 2
 		isValidEmail := strings.Contains(email, "@")
-		isValidTicketNum := userTickets > 0 && userTickets < remTickets
+		isValidTicketNum := userTickets > 0 && userTickets <= remTickets
 
 		if isValidName && isValidEmail && isValidTicketNum {
 			remTickets -= userTickets
